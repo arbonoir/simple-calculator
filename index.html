@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enhanced Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calculator" role="application" aria-label="Enhanced calculator">
+    <header class="calc-header">
+      <h1>Calculator</h1>
+      <div class="controls">
+        <label class="toggle">
+          <input id="keyboardOnly" type="checkbox" />
+          Keyboard-only
+        </label>
+        <button id="clearHistory" class="mini">Clear history</button>
+      </div>
+    </header>
+
+    <div class="top-row">
+      <div class="display" id="display" aria-live="polite">0</div>
+
+      <aside class="history" id="history" aria-label="Calculation history">
+        <h2>History</h2>
+        <ul id="historyList"></ul>
+      </aside>
+    </div>
+
+    <div class="keys" id="keys" role="group" aria-label="Calculator keys">
+      <button class="key wide" data-action="clear" title="Clear (Esc)">C</button>
+      <button class="key" data-action="backspace" title="Backspace (⌫)">⌫</button>
+      <button class="key" data-value="(" title="(">(</button>
+      <button class="key" data-value=")" title=")">)</button>
+
+      <button class="key" data-value="7">7</button>
+      <button class="key" data-value="8">8</button>
+      <button class="key" data-value="9">9</button>
+      <button class="key operator" data-value="/" title="Divide">÷</button>
+
+      <button class="key" data-value="4">4</button>
+      <button class="key" data-value="5">5</button>
+      <button class="key" data-value="6">6</button>
+      <button class="key operator" data-value="*" title="Multiply">×</button>
+
+      <button class="key" data-value="1">1</button>
+      <button class="key" data-value="2">2</button>
+      <button class="key" data-value="3">3</button>
+      <button class="key operator" data-value="-" title="Subtract">−</button>
+
+      <button class="key" data-value="0">0</button>
+      <button class="key" data-value=".">.</button>
+      <button class="key" data-value="%" title="Percent">%</button>
+      <button class="key operator equals" data-action="equals" title="Equals (Enter)">=</button>
+    </div>
+
+    <footer class="hint">Keyboard: digits, + - * /, Enter =, Esc clear, Backspace delete, % (Shift+5), ( )</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
