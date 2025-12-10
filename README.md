@@ -1,2 +1,2 @@
 # simple-calculator
-SImple Calculator to test out GitHub
+SImple Calculator to test out GitHub and push/pull
